@@ -33,7 +33,7 @@ end
 def require_args(args, count)
   return unless args.length != count
 
-  puts 'usage: docgen [input] [output] [level] [section] [...options]'
+  puts 'usage: jocasta [input] [output] [level] [section] [...options]'
   exit 1
 end
 
@@ -80,7 +80,11 @@ level_hash = ''
 (1..level).each do
   level_hash += '#'
 end
-result = "#{level_hash} #{options[:title]}\n" + result if options[:title]
+result = if options[:title]
+           "#{level_hash} #{options[:title]}\n" + result
+         else
+           "#{level_hash} #{section_name}\n" + result
+         end
 
 # -----
 
