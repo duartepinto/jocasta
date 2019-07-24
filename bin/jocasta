@@ -56,8 +56,7 @@ def get_section(content, level, section)
 end
 
 paired_args = {
-  '--title' => :title,
-  '--transforms' => :transforms
+  '--title' => :title
 }
 options = parse_options paired_args
 
