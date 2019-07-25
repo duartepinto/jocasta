@@ -19,6 +19,7 @@ Utility to extract a section of a Markdown file and write it into a separate fil
 
 Options:
 * __--title__ - Title that will replace the section title in the output file. If none, it will use the same title.
+* __--out_level__ - Level of the parent section in the output file. If none, it will keep the same level.
 
 Named after [Jocasta Nu](https://starwars.fandom.com/wiki/Jocasta_Nu) from Star Wars.
 Based on script made by [ReSwift](https://github.com/ReSwift/ReSwift/blob/master/.scripts/doc-preprocessor)

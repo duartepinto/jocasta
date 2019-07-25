@@ -3,9 +3,6 @@
 
 require 'json'
 
-# This script is based on a script by ReSwift that can be found at
-# https://github.com/ReSwift/ReSwift/blob/master/.scripts/doc-preprocessor
-
 def parse_options(paired_args)
   options = { args: [] }
   index = 0
@@ -56,7 +53,8 @@ def get_section(content, level, section)
 end
 
 paired_args = {
-  '--title' => :title
+  '--title' => :title,
+  '--out_level' => :out_level
 }
 options = parse_options paired_args
 
@@ -77,7 +75,8 @@ unless result
 end
 
 level_hash = ''
-(1..level).each do
+out_level = options[:out_level] || level
+(1..out_level.to_i).each do
   level_hash += '#'
 end
 result = if options[:title]
