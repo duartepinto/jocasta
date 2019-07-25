@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'jocasta'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2019-07-24'
   s.summary     = "Utility to extract a section of a Markdown file and write it into a separate file."
   s.authors     = ["Duarte Pinto"]
